@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Örnekleri - GEOTEK Teknoloji</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .demo-section {
+            background: white;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #007bff;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-5">JavaScript Örnekleri</h1>
+
+                <div class="demo-section">
+                    <h3>Değişken Türleri</h3>
+                    <div class="code-block">
+                        <script>
+                            var yas = 21;
+                            var sehir = "Ankara";
+                            var deger1 = true;
+
+                            document.write("Yaş değişkeninin türü: " + typeof (yas) + "<br>");
+                            document.write("Şehir değişkeninin türü: " + typeof (sehir) + "<br>");
+                            document.write("Değer1 değişkeninin türü: " + typeof (deger1) + "<br>");
+                        </script>
+                    </div>
+                </div>
+
+                <div class="demo-section">
+                    <h3>Basit Hesaplama</h3>
+                    <div class="code-block">
+                        <script>
+                            var sayi1 = 10;
+                            var sayi2 = 5;
+                            var toplam = sayi1 + sayi2;
+                            var fark = sayi1 - sayi2;
+                            var carpim = sayi1 * sayi2;
+                            var bolum = sayi1 / sayi2;
+
+                            document.write("Sayı 1: " + sayi1 + "<br>");
+                            document.write("Sayı 2: " + sayi2 + "<br>");
+                            document.write("Toplam: " + toplam + "<br>");
+                            document.write("Fark: " + fark + "<br>");
+                            document.write("Çarpım: " + carpim + "<br>");
+                            document.write("Bölüm: " + bolum + "<br>");
+                        </script>
+                    </div>
+                </div>
+
+                <div class="demo-section">
+                    <h3>Switch Case Örneği</h3>
+                    <div class="code-block">
+                        <script>
+                            var gun = new Date().getDay();
+                            var gunAdi;
+
+                            switch (gun) {
+                                case 0:
+                                    gunAdi = "Pazar";
+                                    break;
+                                case 1:
+                                    gunAdi = "Pazartesi";
+                                    break;
+                                case 2:
+                                    gunAdi = "Salı";
+                                    break;
+                                case 3:
+                                    gunAdi = "Çarşamba";
+                                    break;
+                                case 4:
+                                    gunAdi = "Perşembe";
+                                    break;
+                                case 5:
+                                    gunAdi = "Cuma";
+                                    break;
+                                case 6:
+                                    gunAdi = "Cumartesi";
+                                    break;
+                                default:
+                                    gunAdi = "Bilinmeyen";
+                            }
+
+                            document.write("Bugün: " + gunAdi + "<br>");
+                        </script>
+                    </div>
+                </div>
+
+                <div class="demo-section">
+                    <h3>Döngü Örneği</h3>
+                    <div class="code-block">
+                        <script>
+                            document.write("1'den 5'e kadar sayılar:<br>");
+                            for (var i = 1; i <= 5; i++) {
+                                document.write(i + " ");
+                            }
+                            document.write("<br><br>");
+
+                            document.write("Çift sayılar (2'den 10'a):<br>");
+                            for (var j = 2; j <= 10; j += 2) {
+                                document.write(j + " ");
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="index.html" class="btn btn-primary">Ana Sayfaya Dön</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
