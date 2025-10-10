@@ -216,14 +216,16 @@
     $(".nav a").each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
-      if (
-        refElement.position().top <= scrollPos &&
-        refElement.position().top + refElement.height() > scrollPos
-      ) {
-        $(".nav ul li a").removeClass("active");
-        currLink.addClass("active");
-      } else {
-        currLink.removeClass("active");
+      if (refElement.length) {
+        if (
+          refElement.position().top <= scrollPos &&
+          refElement.position().top + refElement.height() > scrollPos
+        ) {
+          $(".nav ul li a").removeClass("active");
+          currLink.addClass("active");
+        } else {
+          currLink.removeClass("active");
+        }
       }
     });
   }
@@ -294,6 +296,7 @@
   }
 
   function visible(partial) {
+    if (partial.length) {
     var $t = partial,
       $w = jQuery(window),
       viewTop = $w.scrollTop(),
@@ -303,6 +306,7 @@
       compareTop = partial === true ? _bottom : _top,
       compareBottom = partial === true ? _top : _bottom;
 
+    }
     return (
       compareBottom <= viewBottom && compareTop >= viewTop && $t.is(":visible")
     );
