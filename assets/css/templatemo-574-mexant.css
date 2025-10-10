@@ -242,7 +242,7 @@ header
 }
 
 .header-area {
-  background-image: url(../images/header-bg.png);
+  /* background-image: url(../images/heading-bg.jpg); */
   background-color: #fff;
   background-size: contain;
   background-repeat: no-repeat;
